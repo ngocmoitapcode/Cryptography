@@ -78,21 +78,22 @@ def decrypt(y1, y2, a, p) :
 
 
 
-p = 37937322385111 # a random prime number
+p = 472868766193183 # a random prime number limit 16digits long
 g = find_g(p) # primitiveRoot
 print()
 a = random.randint(0, 1000) # random privateKey_sender
 h = find_h(g, a, p) #publicKey_sender
-
+print("Public key(p, g, h) =" , "(", p, ",", g, ",", h, ")")
 #encryption
+print("This is the encryption")
 mes = 20020454
+print("Message is:", mes)
 r = random.randint(0, 1000) # random sprivateKey_receiver
 my_encryption = encrypt(mes, g, h, r, p)
-print(my_encryption)
+print("This is the ciphertext:", my_encryption)
 y1 = my_encryption[0]
 y2 = my_encryption[1]
-print(y1,y2)
-print(a)
-print(p)
+
+#Decryption
 x = decrypt(y1, y2, a, p)
-print(x)
+print("This is the plaintext:", x)
