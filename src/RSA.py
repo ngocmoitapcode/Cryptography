@@ -53,9 +53,9 @@ def encrypt(x, e, n):
     return (pow(x, e, n))
 def decrypt(y, d, n):
     return (pow(y, d, n))
-p = 997497979979
-q = 197111971171
-e = 197111971171333
+p = 6559104500632469
+q = 8235815752278001
+e = 85212761
 n = p*q
 if (isPrime(p) == False or isPrime(q) == False):
     print("Invalid input")
